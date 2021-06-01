@@ -27,7 +27,15 @@ namespace MANKIE_MUNCH
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
+            Title.Visibility = Visibility.Hidden;
+            monkeyImg.Visibility = Visibility.Hidden;
+            fireImg.Visibility = Visibility.Hidden;
+            startBtn.Visibility = Visibility.Hidden;
+         
 
+            bananaBackground.ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "gameBackground.jpg"));
+
+            this.Background = bananaBackground;
         }
 
     }

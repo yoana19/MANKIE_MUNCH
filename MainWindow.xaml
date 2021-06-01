@@ -11,19 +11,35 @@
 	</Window.Resources>
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="banana-health-benefits-you-might-not-know-about-1440x810.jpg"/>
+            <ImageBrush x:Name="bananaBackground" ImageSource="banana-health-benefits-you-might-not-know-about-1440x810.jpg"/>
         </Grid.Background>
-        <Button FontFamily="Alata" Height="100" x:Name="Start" Content="START" Click="Start_Click" Margin="884,772,233.333,122.667" FontSize="50" Background="White" FontWeight="Bold">
+        <Button x:Name="startBtn" FontFamily="Alata" Height="100" Content="START" Click="Start_Click" Margin="884,772,233.333,122.667" FontSize="50" Background="White" FontWeight="Bold">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF33DC" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
             <Button.Effect>
                 <DropShadowEffect/>
-            </Button.Effect>
+            </Button.Effect>	
         </Button>
-        <Image Margin="-253,156,704.333,-0.333" Source="purepng.com-monkeymonkeyfunnyanimalwildchimpanzeeape-981524651620xnkin.png" Stretch="Fill"/>
-        <Image Margin="967,506,166.333,345.667" Source="311046523021211.png" Stretch="Fill" Opacity="0.7">
-            <Image.Effect>
-                <BlurEffect/>
-            </Image.Effect>
-        </Image>
-        <TextBlock HorizontalAlignment="Left" Margin="775,176,0,0" TextWrapping="Wrap" Text="MANKIE MUNCH" VerticalAlignment="Top" Height="395" Width="466" FontFamily="Alata" FontSize="110" FontWeight="Bold"/>
+        <Image x:Name="monkeyImg" Margin="-253,156,704.333,-0.333" Source="purepng.com-monkeymonkeyfunnyanimalwildchimpanzeeape-981524651620xnkin.png" Stretch="Fill"/>
+		<Image x:Name="fireImg" Margin="471,742,646.333,109.667" Source="311046523021211.png" Stretch="Fill" Opacity="0.7">
+			<Image.Effect>
+				<BlurEffect/>
+			</Image.Effect>
+		</Image>
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="775,176,0,0" TextWrapping="Wrap" Text="MANKIE MUNCH" VerticalAlignment="Top" Height="395" Width="549" FontFamily="Alata" FontSize="130" FontWeight="Bold">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFFF33DC" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
     </Grid>
 </Window>
