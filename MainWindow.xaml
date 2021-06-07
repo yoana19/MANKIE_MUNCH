@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MANKIE_MUNCH"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1024" Width="1440">
-	<Window.Resources>
-	
-	</Window.Resources>
+        Title="MainWindow" Height="1024" Width="1440" FocusManager.FocusedElement="{Binding ElementName=MyCanvas}">
+    <Window.Resources>
+
+    </Window.Resources>
     <Grid>
         <Grid.Background>
             <ImageBrush x:Name="bananaBackground" ImageSource="banana-health-benefits-you-might-not-know-about-1440x810.jpg"/>
         </Grid.Background>
-        <Button x:Name="startBtn" FontFamily="Alata" Height="100" Content="START" Click="Start_Click" Margin="884,772,233.333,122.667" FontSize="50" Background="White" FontWeight="Bold">
+        <Button x:Name="startBtn" FontFamily="Alata" Height="100" Content="START" Click="Start_Click" Margin="959,764,158.333,130.667" FontSize="50" Background="White" FontWeight="Bold">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -22,14 +22,14 @@
             </Button.Foreground>
             <Button.Effect>
                 <DropShadowEffect/>
-            </Button.Effect>	
+            </Button.Effect>
         </Button>
         <Image x:Name="monkeyImg" Margin="-253,156,704.333,-0.333" Source="purepng.com-monkeymonkeyfunnyanimalwildchimpanzeeape-981524651620xnkin.png" Stretch="Fill"/>
-		<Image x:Name="fireImg" Margin="471,742,646.333,109.667" Source="311046523021211.png" Stretch="Fill" Opacity="0.7">
-			<Image.Effect>
-				<BlurEffect/>
-			</Image.Effect>
-		</Image>
+        <Image x:Name="fireImg" Margin="786,864,0.333,-0.333" Source="311046523021211.png" Stretch="Fill" Opacity="0.7">
+            <Image.Effect>
+                <BlurEffect/>
+            </Image.Effect>
+        </Image>
         <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="775,176,0,0" TextWrapping="Wrap" Text="MANKIE MUNCH" VerticalAlignment="Top" Height="395" Width="549" FontFamily="Alata" FontSize="130" FontWeight="Bold">
             <TextBlock.Effect>
                 <DropShadowEffect/>
@@ -41,5 +41,28 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
+
+
+        <Canvas Name="MyCanvas" KeyDown="Canvas_KeyDown" KeyUp="Canvas_KeyUp" Focusable="True" Visibility="Visible" >
+            <Rectangle Name="monkey" Width="175" Height="230" Margin="0" Canvas.Left="611" Canvas.Top="765">
+
+                <Rectangle.Fill>
+                    <ImageBrush  ImageSource="monkey.png"/>
+                </Rectangle.Fill>
+
+
+            </Rectangle>
+            <Rectangle Name="rec3" Width="150" Height="200" Margin="0" Canvas.Left="28" Canvas.Top="10">
+
+                <Rectangle.Fill>
+                    <ImageBrush  ImageSource="bomb.png"/>
+                </Rectangle.Fill>
+
+
+            </Rectangle>
+
+        </Canvas>
+
     </Grid>
+
 </Window>
