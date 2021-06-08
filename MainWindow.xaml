@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MANKIE_MUNCH"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1024" Width="1440" FocusManager.FocusedElement="{Binding ElementName=MyCanvas}">
+        Title="MainWindow" Height="1024" Width="1440">
     <Window.Resources>
 
     </Window.Resources>
@@ -42,27 +42,8 @@
             </TextBlock.Foreground>
         </TextBlock>
 
-
-        <Canvas Name="MyCanvas" KeyDown="Canvas_KeyDown" KeyUp="Canvas_KeyUp" Focusable="True" Visibility="Visible" >
-            <Rectangle Name="monkey" Width="175" Height="230" Margin="0" Canvas.Left="611" Canvas.Top="765">
-
-                <Rectangle.Fill>
-                    <ImageBrush  ImageSource="monkey.png"/>
-                </Rectangle.Fill>
-
-
-            </Rectangle>
-            <Rectangle Name="rec3" Width="150" Height="200" Margin="0" Canvas.Left="28" Canvas.Top="10">
-
-                <Rectangle.Fill>
-                    <ImageBrush  ImageSource="bomb.png"/>
-                </Rectangle.Fill>
-
-
-            </Rectangle>
-
-        </Canvas>
-
     </Grid>
 
 </Window>
+
+    

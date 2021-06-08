@@ -1,0 +1,29 @@
+﻿<Window x:Class="MANKIE_MUNCH.Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MANKIE_MUNCH"
+        mc:Ignorable="d"
+        Title="Game" Height="1024" Width="1440" FocusManager.FocusedElement="{Binding ElementName=MyCanvas}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush x:Name="gameBackground" ImageSource="gameBackground.jpg"/>
+        </Grid.Background>
+
+        <Canvas Name="MyCanvas" Height="1024" Width="1440" KeyDown="Canvas_KeyDown" KeyUp="Canvas_KeyUp" Focusable="True" Visibility="Visible" >
+            <Rectangle Name="monkey" Width="175" Height="230" Margin="0" Canvas.Left="611" Canvas.Top="765">
+
+                <Rectangle.Fill>
+                    <ImageBrush  ImageSource="monkey.png"/>
+                </Rectangle.Fill>
+
+
+            </Rectangle>
+
+
+        </Canvas>
+        <TextBox Name="scoreText" IsReadOnly = "True" HorizontalAlignment="Left" Height="66" TextWrapping="Wrap" VerticalAlignment="Top" Width="478" Margin="913,34,0,0" FontSize="48" FontFamily="Segoe UI Black" Background="#FF676767"/>
+        <TextBox Name="damageText" IsReadOnly = "True" HorizontalAlignment="Left" Height="61" TextWrapping="Wrap" VerticalAlignment="Top" Width="478" Margin="913,105,0,0" FontSize="48" FontFamily="Segoe UI Black" Background="#FF676767"/>
+    </Grid>
+</Window>
